@@ -29,8 +29,15 @@ However, quantum circuits are unitary by construction. This notebook follows the
 - NumPy
 - SciPy
 - Matplotlib (optional for visualization)
+## Terminal commands 
 
-Install dependencies with:
+Print Kraus operators, their SVD and the analytical rho(t) to terminal:
 
-```bash
-pip install qiskit numpy scipy matplotlib
+# Step 1: Simulate
+python Lindblad_sim.py simulate --t 5.0 --gamma 1.0 --steps 50 --outdir ./outputs
+
+# Step 2: Fidelity Plot
+python Lindblad_sim.py fidelity --t 5.0 --gamma 1.0 --steps 50 --outdir ./outputs
+
+# Step 3: Population Plot
+python Lindblad_sim.py population --t 5.0 --gamma 1.0 --steps 50 --outdir ./outputs
